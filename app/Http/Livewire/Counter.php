@@ -9,12 +9,12 @@ class Counter extends Component
     public $name= 'leonel';
     public $title = 'Counter';
 
-    public function mount($title)
+    public function mount($title = '')
     {
         $this->title=$title;
     }
     public function render()
     {
-        return view('livewire.counter')->layout('welcome')->layoutData(['title'=>$this->title]);
+        return view('livewire.counter');
     }
 }
