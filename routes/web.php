@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Livewire\Counter;
+use App\Http\Livewire\Product\Create as ProductCreate;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,3 +18,8 @@ Route::get('/', function (){
     return view('welcome');
 });
 Route::get('/counter', Counter::class);
+Route::get('/product/create', ProductCreate::class);
+
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
+    return view('dashboard')->layout('layouts.app');
+})->name('dashboard');
