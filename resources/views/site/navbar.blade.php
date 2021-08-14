@@ -52,9 +52,12 @@
                         <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
                             Settings
                         </a>
-                        <a href="#" class="block px-4 py-2 text-sm capitalize text-gray-700 hover:bg-blue-500 hover:text-white">
-                            Sign Out
-                        </a>
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <x-jet-dropdown-link href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                            </x-jet-dropdown-link>
+                        </form>
                     </div>
                 </div>
                 <!-- -->

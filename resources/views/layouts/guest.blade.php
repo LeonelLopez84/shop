@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
-        <title>{{ config('app.name', 'Laravel') }}</title>
+        <title>Shop</title>
 
         <link rel="stylesheet" href="{{ mix('css/app.css') }}">
         @livewireStyles
@@ -68,6 +68,7 @@
         </style>
     </head>
     <body class="bg-white text-gray-600 work-sans leading-normal text-base tracking-normal">
+
         <div class="font-sans text-gray-900 antialiased">
             {{ $slot }}
         </div>

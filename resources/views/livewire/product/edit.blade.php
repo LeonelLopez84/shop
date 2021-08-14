@@ -1,7 +1,6 @@
-
 <div class="md:container mx-auto container">
     <div class="w-full">
-        <h1 class="text-center text-gray-700 text-3xl font-medium"> Agregar producto</h1>
+        <h1 class="text-center text-gray-700 text-3xl font-medium"> Editar producto</h1>
         <form wire:submit.prevent="save" class="w-full">
             <div class="p-6">
                 <label class="block">Nombre del producto</label>
@@ -35,4 +34,3 @@
         </form>
     </div>
 </div>
-
