@@ -15,11 +15,16 @@ use App\Http\Livewire\Product\Create as ProductCreate;
 */
 
 Route::get('/', function (){
-    return view('welcome');
+    return view('site.home');
 });
-Route::get('/counter', Counter::class);
-Route::get('/product/create', ProductCreate::class);
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard')->layout('layouts.app');
-})->name('dashboard');
+/*Route::prefix('admin')->middleware(['admin'])->group(function() {
+    Route::get('/product/create', ProductCreate::class);
+});*/
+
+Route::prefix('admin')->middleware(['auth:sanctum', 'verified','admin'])->group(function(){
+    Route::get('/dashboard',function (){
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+});
+
