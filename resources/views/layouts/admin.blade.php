@@ -38,7 +38,7 @@
             <main class="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
                 <div class="container mx-auto">
                     <div class="mt-8">
-                        {{$slot}}
+                       {{$slot}}
                     </div>
                 </div>
             </main>
